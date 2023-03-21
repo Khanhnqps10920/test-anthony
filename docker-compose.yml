@@ -20,7 +20,7 @@ services:
     build: .
     container_name: cons-node
     environment:
-      - DATABASE=db_food
+      - DATABASE=db_pinterest
       - USERNAME=root
       - PASSWORD=1234
       - HOST=mysql_db

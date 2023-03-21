@@ -43,6 +43,10 @@ const getImages = async (req, res) => {
   try {
     let data = await model.image.findAll();
 
+    if (!data) {
+      throw new Error("cant not found")
+    }
+
     successCode(res, data, "Get images successful");
   } catch (err) {
     errorCode(res, data, "Error BE");
