@@ -49,7 +49,7 @@ const getImages = async (req, res) => {
 
     successCode(res, data, "Get images successful");
   } catch (err) {
-    errorCode(err, "Error BE");
+    errorCode(res, "Error BE");
   }
 };
 

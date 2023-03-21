@@ -6,7 +6,7 @@ services:
     container_name: mysql_db
     environment:
       - MYSQL_ROOT_PASSWORD=1234
-      - MYSQL_DATABASE=db_food
+      - MYSQL_DATABASE=db_pinterest
     ports:
       - 3306:3306
     volumes:
@@ -16,6 +16,7 @@ services:
   node:
     depends_on:
       - mysql_db
+    restart: always
     # image: undertarke/node28
     build: .
     container_name: cons-node
